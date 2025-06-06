@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Gabrielly Sena</title>
+    <link rel="stylesheet" href="../static/styles/portfolio.css">
+    <link rel="stylesheet" href="../static/styles/responsive.css">
+    <link rel="stylesheet" href="../static/styles/hamburger.css">
+</head>
+
+<body>
+    <!-- NAVEGAÇÃO -->
+    <div class="hamburger-menu" aria-label="Menu de navegação">
+        <div class="hamburger-icon"></div>
+    </div>
+    <nav role="navigation" aria-label="Menu principal">
+        <a href="#home" aria-label="Ir para seção Home">Home</a>
+        <a href="#sobre" aria-label="Ir para seção Sobre">Sobre</a>
+        <a href="#projetos" aria-label="Ir para seção Projetos">Projetos</a>
+        <a href="#contato" aria-label="Ir para seção Contato">Contato</a>
+    </nav>
+
+    <!-- SEÇÃO HOME -->
+    <section id="home" class="Pagina_1">
+        <div class="background">
+            <img src="../static/assets/teste.png" alt="Background decorativo">
+        </div>
+
+        <header class="titulo">
+        <div class="strawberry1">
+            <img src="../static/assets/strawberry1.png" alt="Decoração morango">
+        </div>
+
+            <h1 class="fade-slide" >My<br>Portfolio</h1>
+        </header>
+
+        <div class="meu_nome">
+            <h2>Gabrielly Sena</h2>
+        </div>
+
+        <figure class="my_foto">
+            <img class="fade-slide" src="../static/assets/my photo.svg" alt="Foto da Gabrielly Sena">
+        </figure>
+
+        <article class="primeiro_texto" class="fade-slide">
+            <div class="titulo1">
+                <h3 class="fade-slide">About me</h3>
+            </div>
+            <div class="texto1">
+                <p id="typewriter1"></p>
+            </div>
+        </article>
+
+        <article class="segundo_texto">
+            <div class="titulo2">
+                <h3 class="fade-slide">About portfolio</h3>
+            </div>
+            <div class="texto2">
+                <p id="typewriter2"></p>
+            </div>
+        </article>
+
+        <div class="number_page" aria-label="Página 1">
+            <span>Page 01</span>
+        </div>
+    </section>
+
+<script>
+const texto1 = "Olá! Meu nome é Gabrielly e sou formada no curso técnico de Desenvolvimento de Sistemas pelo SENAI, em parceria com o SESI. Durante minha formação, tive contato com as áreas de front-end e back-end e me identifiquei com ambas, já que se complementam e me permitem ter uma visão completa do desenvolvimento.";
+const texto2 = "Este portfólio reúne meus projetos desenvolvidos durante minha trajetória em Desenvolvimento de Sistemas. Aqui você encontrará aplicações web, soluções para banco de dados e outros trabalhos que demonstram minhas habilidades nessa área, tanto no front-end quanto no back-end.";
+
+let i = 0;
+let j = 0;
+
+function type1() {
+    if (i < texto1.length) {
+        document.getElementById("typewriter1").innerHTML += texto1.charAt(i);
+        i++;
+        setTimeout(type1, 30);
+    } else {
+        setTimeout(type2, 500); // espera um pouco antes de começar o segundo texto
+    }
+}
+
+function type2() {
+    if (j < texto2.length) {
+        document.getElementById("typewriter2").innerHTML += texto2.charAt(j);
+        j++;
+        setTimeout(type2, 30);
+    }
+}
+
+window.onload = type1;
+</script>
+
+
+    <!-- SEÇÃO SOBRE/SKILLS -->
+    <section id="sobre" class="Pagina_2">
+        <div class="background2">
+            <img src="../static/assets/background2teste.png" alt="Background decorativo">
+        </div>
+
+        <header class="titulo_2_pagina">
+            <h2>My Skills</h2>
+        </header>
+
+        <div class="skill-section linguagens-section">
+            <h3 class="skill-title">💻 Linguagens</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon">H</div>
+                    <span class="skill-name">HTML</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">C</div>
+                    <span class="skill-name">CSS</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">JS</div>
+                    <span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🐍</div>
+                    <span class="skill-name">Python</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-section ferramentas-section">
+            <h3 class="skill-title">🛠️ Ferramentas</h3>
+            <div class="skills-list">
+                <div class="skill-text-item">Canva</div>
+                <div class="skill-text-item">Figma</div>
+                <div class="skill-text-item">Kanban</div>
+                <div class="skill-text-item">Miro</div>
+                <div class="skill-text-item">Trello</div>
+                <div class="skill-text-item">VS Code</div>
+            </div>
+        </div>
+
+        <div class="skill-section frameworks-section">
+            <h3 class="skill-title">🚀 Frameworks & Tech</h3>
+            <div class="skills-list1">
+                <div class="skill-text-item2">Framework Flask</div>
+                <div class="skill-text-item2">Banco de Dados</div>
+                <div class="skill-text-item2">UX e UI</div>
+                <div class="skill-text-item2">Prototipação</div>
+                <div class="skill-text-item2">API's</div>
+                <div class="skill-text-item2">Responsividade</div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <h3 class="progress-title">📊 Nível de Conhecimento</h3>
+            <div class="progress-items-container">
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span class="progress-name">CSS</span>
+                        <span class="progress-percentage">90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span class="progress-name">HTML</span>
+                        <span class="progress-percentage">90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span class="progress-name">Python</span>
+                        <span class="progress-percentage">80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span class="progress-name">JavaScript</span>
+                        <span class="progress-percentage">75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="number_page2" aria-label="Página 2">
+        <span>Page 02</span>
+    </div>
+    </section>
+
+    <script>
+        // Detecta quando a seção entra na tela
+        document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        
+        function checkVisibility() {
+            sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const isVisible = (rect.top <= window.innerHeight * 0.8) && (rect.bottom >= 0);
+            
+            if (isVisible) {
+                section.classList.add('visible');
+            }
+            });
+        }
+        
+        // Verifica na carga inicial e durante o scroll
+        checkVisibility();
+        window.addEventListener('scroll', checkVisibility);
+        });
+
+         document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.style.width;
+                        entry.target.style.width = '0%';
+                        setTimeout(() => {
+                            entry.target.style.width = width;
+                        }, 500);
+                    }
+                });
+            });
+
+            progressBars.forEach(bar => {
+                observer.observe(bar);
+            });
+
+            // Efeito de hover nas skill cards
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+
+<!-- SEÇÃO PROJETOS -->
+<section id="projetos" class="Pagina_3">
+    <div class="background3">
+        <img src="../static/assets/background3.png" alt="Background decorativo">
+    </div>
+
+    <header class="titulo_3_pagina">
+        <h2>My Projects</h2>
+    </header>
+
+    <div class="clips">
+        <img src="../static/assets/clips.png" alt="Decoração clips">
+    </div>
+
+    <div class="container-projetos">
+        <div class="lista-projetos">
+            <div class="projeto-item active" data-projeto="0">
+                <span class="projeto-tipo">Site</span>
+                <span class="projeto-nome">Vibra Vision</span>
+            </div>
+
+            <div class="projeto-item" data-projeto="1">
+                <span class="projeto-tipo">Site</span>
+                <span class="projeto-nome">Amethist Investiment</span>
+            </div>
+
+            <div class="projeto-item" data-projeto="2">
+                <span class="projeto-tipo">Site</span>
+                <span class="projeto-nome">Game Master</span>
+            </div>
+
+            <div class="projeto-item" data-projeto="4">
+                <span class="projeto-tipo">Jogo</span>
+                <span class="projeto-nome">Super Trunfo Sailor Moon</span>
+            </div>
+
+            <div class="projeto-item" data-projeto="5">
+                <span class="projeto-tipo">Site</span>
+                <span class="projeto-nome">Chat</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-projeto">
+    <div class="carrossel-container">
+        <img src="../static/assets/vibravision.png" class="carrossel-imagem ativa" alt="Projeto Vibra Vision">
+        <img src="../static/assets/amethist.png" class="carrossel-imagem" alt="Projeto Amethist Investiment">
+        <img src="../static/assets/gamemaster.png" class="carrossel-imagem" alt="Projeto Game Master">
+        <img src="../static/assets/supertrunfo.png" class="carrossel-imagem" alt="Projeto Super Trunfo Sailor Moon">
+        <img src="../static/assets/chat (2).png" class="carrossel-imagem" alt="Projeto Chat">
+        <button class="seta esquerda" onclick="navegarProjeto(-1)" aria-label="Projeto anterior">‹</button>
+        <button class="seta direita" onclick="navegarProjeto(1)" aria-label="Próximo projeto">›</button>
+    </div>
+
+    <div class="info-texto">
+        <h3 class="info-titulo">Vibra Vision</h3>
+        <p class="info-descricao">
+            Um site moderno desenvolvido para venda de pulseiras para pessoas com deficiência visual.
+        </p>
+        <div class="info-tecnologias">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Python</span>
+        </div>
+        <div class="botoes-projeto">
+            <a href="#" class="btn-projeto btn-demo">Ver no github</a>
+            <a href="#" class="btn-projeto btn-codigo">Ver online</a>
+        </div>
+    </div>
+</div>
+
+    <div class="number_page3" aria-label="Página 3">
+        <span>Page 03</span>
+    </div>
+</section>
+
+    <script>
+            const projetos = [
+        {
+            nome: "Vibra Vision",
+            descricao: "Um site moderno desenvolvido para uma empresa de venda de pulseiras para pessoas com deficiência visual, focando na experiência do usuário e design clean.",
+            tecnologias: ["HTML", "CSS",],
+            demo: "https://github.com/GabySena/Site---Vibra-Vision",
+            codigo: "https://site-vibra-vision.onrender.com"
+        },
+        {
+            nome: "Amethist Investiment",
+            descricao: "Plataforma de investimentos com interface intuitiva e recursos avançados para análise de mercado como graficos baseando nas suas preferências.",
+            tecnologias: ["HTML", "CSS", "APIs", "Flask"],
+            demo: "https://github.com/GabySena/Site---Amethist-Investment",
+            codigo: "https://site-amethist-investment-3.onrender.com"
+        },
+        {
+            nome: "Game Master",
+            descricao: "Site dedicado para uma empresa de venda de jogos, para auxiliar eles a cadastrar os jogos disponiveis.",
+            tecnologias: ["Python", "Flask", "CSS", "HTML"],
+            demo: "https://github.com/GabySena/Site---Game-Master/tree/main",
+            codigo: "https://site-game-master-2.onrender.com"
+        },
+        {
+            nome: "Super Trunfo Sailor Moon",
+            descricao: "Jogo digital baseado no clássico Super Trunfo com tema de Sailor Moon.",
+            tecnologias: ["JavaScript", "HTML", "CSS", "Game Logic"],
+            demo: "https://github.com/GabySena/Jogo---Super-Trunfo-Sailor-Moon",
+            codigo: "https://super-trunfo-k4g8.onrender.com"
+        },
+        {
+            nome: "Chat",
+            descricao: "Um Chat moderno para comunicação entre amigos, com design responsivo.",
+            tecnologias: ["HTML", "CSS", "JavaScript", "Responsive"],
+            demo: "https://github.com/GabySena/Site---Chatnoir",
+            codigo: "https://477h9ikc9v8p.manus.space/"
+        }
+    ];
+
+    let projetoAtual = 0;
+
+    function atualizarProjeto(indice) {
+        // Atualizar imagens
+        const imagens = document.querySelectorAll('.carrossel-imagem');
+        imagens.forEach((img, i) => {
+            img.classList.toggle('ativa', i === indice);
+        });
+
+        // Atualizar lista de projetos
+        const itens = document.querySelectorAll('.projeto-item');
+        itens.forEach((item, i) => {
+            item.classList.toggle('active', i === indice);
+        });
+
+        // Atualizar informações
+        const projeto = projetos[indice];
+        document.querySelector('.info-titulo').textContent = projeto.nome;
+        document.querySelector('.info-descricao').textContent = projeto.descricao;
+        
+        const techContainer = document.querySelector('.info-tecnologias');
+        techContainer.innerHTML = projeto.tecnologias
+            .map(tech => `<span class="tech-tag">${tech}</span>`)
+            .join('');
+
+        document.querySelector('.btn-demo').href = projeto.demo;
+        document.querySelector('.btn-codigo').href = projeto.codigo;
+    }
+
+    function navegarProjeto(direcao) {
+        projetoAtual = (projetoAtual + direcao + projetos.length) % projetos.length;
+        atualizarProjeto(projetoAtual);
+    }
+
+    // Event listeners para os itens da lista
+    document.querySelectorAll('.projeto-item').forEach((item, indice) => {
+        item.addEventListener('click', () => {
+            projetoAtual = indice;
+            atualizarProjeto(projetoAtual);
+        });
+    });
+
+    // Inicializar
+    atualizarProjeto(0);
+    </script>
+
+    <!-- SEÇÃO CONTATO -->
+    <section id="contato" class="Pagina_4">
+        <div class="background4">
+            <img src="../static/assets/background4.png" alt="Background decorativo">
+        </div>
+
+        <header class="titulo_4_pagina">
+            <h2>My Contact</h2>
+        </header>
+
+        <div class="contatos-container">
+            <div class="zap">
+                <img src="../static/assets/email.png" alt="Ícone email">
+                <a class="icone1" href="mailto:ribeirodelimasena@gmail.com" aria-label="Enviar email">ribeirodelimasena@gmail.com</a>
+            </div>
+
+            <div class="linkedin">
+                <img src="../static/assets/linkedin.png" alt="Ícone LinkedIn">
+                <a class="icone" href="https://www.linkedin.com/in/gabrielly-sena-233aaa359/" target="_blank" rel="noopener noreferrer" aria-label="Perfil no LinkedIn">Gabrielly Sena</a>
+            </div>
+
+            <div class="github">
+                <img src="../static/assets/github.png" alt="Ícone GitHub">
+                <a class="icone" href="https://github.com/GabySena" target="_blank" rel="noopener noreferrer" aria-label="Perfil no GitHub">GabySena</a>
+            </div>
+        </div>
+
+        <form action="https://formsubmit.co/ribeirodelimasena@gmail.com" method="POST" class="formulario-contato">
+            <h2>Envie sua mensagem</h2>
+            
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required aria-label="Seu nome">
+            
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required aria-label="Seu email">
+            
+            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required aria-label="Sua mensagem"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="number_page4" aria-label="Página 4">
+            <span>Page 04</span>
+        </div>
+    </section>
+
+    <script>
+        let indiceAtual = 0;
+        const imagens = document.querySelectorAll('.carrossel img');
+
+        function mudarImagem(direcao) {
+            imagens[indiceAtual].classList.remove('ativa');
+            indiceAtual = (indiceAtual + direcao + imagens.length) % imagens.length;
+            imagens[indiceAtual].classList.add('ativa');
+        }
+    </script>
+    <script src="../static/js/responsive.js"></script>
+    <script src="../static/js/hamburger.js"></script>
+</body>
+
+</html>
