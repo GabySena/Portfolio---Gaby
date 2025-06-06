@@ -1,0 +1,345 @@
+/* ESTILOS RESPONSIVOS PARA O PORTFÓLIO */
+
+/* Meta viewport já está configurada no HTML */
+
+/* ESTILOS GERAIS RESPONSIVOS */
+:root {
+    --fonte-primaria: 'Hachi Maru Pop', cursive;
+    --fonte-secundaria: 'Mochiy Pop One', sans-serif;
+    --fonte-terciaria: 'Open Sans', sans-serif;
+    --cor-principal: #c51d28;
+    --cor-secundaria: #a92823;
+    --cor-destaque: #60d394;
+    --cor-branca: white;
+    --cor-sombra: #e63946;
+}
+
+/* NAVEGAÇÃO RESPONSIVA */
+@media (max-width: 768px) {
+    nav {
+        padding: 0.8rem 1rem;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0.5rem;
+        gap: 0.3rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+/* PÁGINA HOME RESPONSIVA */
+@media (max-width: 1024px) {
+    .Pagina_1 {
+        grid-template-areas: 
+            "titulo titulo"
+            "foto foto"
+            "texto1 texto2"
+            "page page";
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem 1rem;
+    }
+
+    .titulo {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .my_foto {
+        left: 0;
+        margin: 2rem auto;
+    }
+
+    .meu_nome {
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .Pagina_1 {
+        grid-template-areas: 
+            "titulo"
+            "foto"
+            "texto1"
+            "texto2"
+            "page";
+        grid-template-columns: 1fr;
+        padding-top: 1rem; 
+    }
+
+
+    .primeiro_texto, .segundo_texto {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .segundo_texto {
+        margin-bottom: 14rem;
+    }
+
+    .titulo1, .titulo2 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .titulo2{
+        margin-bottom: 15rem;
+    }
+
+    .texto1, .texto2 {
+        text-align: justify;
+    }
+
+    .meu_nome {
+        position: static;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);}
+}
+
+/* PÁGINA SKILLS RESPONSIVA */
+@media (max-width: 1024px) {
+    .Pagina_2 {
+        grid-template-areas:
+            "titulo titulo titulo"
+            "linguagens frameworks ferramentas"
+            "progress progress progress";
+        padding: 2rem 1rem;
+    }
+
+    .progress-section {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .Pagina_2 {
+        grid-template-areas:
+            "titulo"
+            "linguagens"
+            "frameworks"
+            "ferramentas"
+            "progress";
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .linguagens-section,
+    .frameworks-section,
+    .ferramentas-section {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .progress-section {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .progress-items-container {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo_2_pagina {
+        text-align: center;
+    }
+}
+
+/* PÁGINA PROJETOS RESPONSIVA */
+@media (max-width: 1200px) {
+    .Pagina_3 {
+        grid-template-areas:
+            "titulo titulo"
+            "projetos carrossel"
+            "page page";
+        padding: 2rem 1rem;
+    }
+
+    .container-projetos {
+        width: 90%;
+    }
+
+    .carrossel-container {
+        left: 0;
+        width: 100%;
+    }
+
+    .info-projeto {
+        right: 0;
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .Pagina_3 {
+        grid-template-areas:
+            "titulo"
+            "projetos"
+            "carrossel"
+            "page";
+        grid-template-columns: 1fr;
+    }
+
+    .container-projetos {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .lista-projetos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .projeto-item {
+        width: calc(50% - 1rem);
+        min-width: 150px;
+    }
+
+    .titulo_3_pagina {
+        text-align: center;
+    }
+
+    .clips {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .projeto-item {
+        width: 100%;
+    }
+
+    .info-texto {
+        padding: 1rem;
+    }
+
+    .info-titulo {
+        font-size: 2rem;
+    }
+}
+
+/* PÁGINA CONTATO RESPONSIVA */
+@media (max-width: 1024px) {
+    .Pagina_4 {
+        grid-template-areas:
+            "titulo titulo"
+            "contatos formulario"
+            "page page";
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .Pagina_4 {
+        grid-template-areas:
+            "titulo"
+            "contatos"
+            "formulario"
+            "page";
+
+        grid-template-columns: 1fr;
+    }
+
+    .contatos-container {
+        align-items: center;
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .titulo_4_pagina {
+        text-align: center;
+    }
+
+    .formulario-contato {
+        width: 90%;
+    }      
+}
+
+/* AJUSTES PARA DISPOSITIVOS MUITO PEQUENOS */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 2.5rem;
+    }
+
+    .my_foto img {
+        width: 200px;
+    }
+
+    .skill-section {
+        padding: 1rem;
+    }
+
+    .skills-grid {
+        gap: 0.5rem;
+    }
+
+    .skill-item {
+        min-height: 100px;
+    }
+
+    .skill-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .info-titulo {
+        font-size: 1.8rem;
+    }
+
+    .botoes-projeto {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .zap img, .linkedin img, .github img {
+        width: 50px;
+    }
+
+    .icone, .icone1 {
+        font-size: 0.9rem;
+    }
+}
+
+/* AJUSTES PARA ORIENTAÇÃO PAISAGEM EM DISPOSITIVOS MÓVEIS */
+@media (max-height: 600px) and (orientation: landscape) {
+    section {
+        min-height: 120vh;
+    }
+
+    .my_foto img {
+        width: 150px;
+    }
+
+    .titulo {
+        font-size: 2.5rem;
+    }
+
+    .primeiro_texto, .segundo_texto {
+        font-size: 0.8rem;
+    }
+}
+
