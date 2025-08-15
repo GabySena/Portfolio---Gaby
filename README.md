@@ -1,5 +1,5 @@
 <h1 align="center">Portfólio-Gaby</h1>
-<img width="1200" height="400" alt="image" src="https://github.com/user-attachments/assets/61165a80-6ba2-4d3a-b47d-5c4c100adada" />
+<img width="1200" height="200" alt="image" src="https://github.com/user-attachments/assets/61165a80-6ba2-4d3a-b47d-5c4c100adada" />
 
 
 <h2>🍓Sobre</h2>
